@@ -1,0 +1,27 @@
+{
+	"css" : [
+		"/assets/bootstrap/css/bootstrap.min.css",
+		"/assets/bootstrap/css/bootstrap.css",
+		"/assets/css/main.css",
+		"/assets/css/font-awesome/css/font-awesome.css"
+  ],
+	"js" : [
+		"/assets/js/jquery-3.2.1.min.js",
+		"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js",
+		"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js",
+		"/assets/js/main.js"
+  ],
+  "fonts" : [
+	],
+	"seo" :
+	{
+		"title" : "Debter",
+		"charset" : "UTF-8",
+		"meta" : {
+			"description" : "The Debter"
+		},
+		"og" : {
+
+		}
+	}
+}

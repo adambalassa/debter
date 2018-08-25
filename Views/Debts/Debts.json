@@ -1,0 +1,23 @@
+{
+	"css" : [
+		"/assets/css/header.css",
+		"/assets/css/project.css"
+  ],
+	"js" : [
+		"/assets/js/debts.js"
+  ],
+  "fonts" : [
+		"https://fonts.googleapis.com/css?family=Encode+Sans+Expanded"
+	],
+	"seo" :
+	{
+		"title" : "Debts",
+		"charset" : "UTF-8",
+		"meta" : {
+			"description" : "Join debter room"
+		},
+		"og" : {
+
+		}
+	}
+}

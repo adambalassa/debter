@@ -1,0 +1,93 @@
+.currency_form{
+  width: 88%;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  border: 1px solid rgba(0,0,0,.2);
+  margin: 20px;
+  box-shadow: 0 0 5px 0px rgba(0,0,0,.12);
+}
+.holder{
+  display: flex;
+  flex-direction: column;
+  min-height: 65vh;
+  max-width: 85vw;
+}
+.row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-holder{
+  display: flex;
+}
+.button{
+  flex: 1;
+}
+.plus_button{
+  margin-left: 8px;
+  border-radius: 5px;
+  background: white;
+  border: 1px solid rgba(0,0,0,.2);
+  padding: 4px;
+  min-width: 40px!important;
+  height: 40px;
+  outline: 0!important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0,0,0,.6);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all ease-in-out .15s;
+}
+.plus_button:hover{
+  background-color: rgba(0,0,0,0.06);
+  color: rgba(0,0,0,.65);
+}
+.currency_form .form-group{
+  display: flex;
+  padding: 0 20px;
+}
+.minus{
+  border: 0;
+  color: rgba(0,0,0,.4);
+}
+.info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-popover-body{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.project{
+  width: 100%;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px
+}
+.project:hover{
+  background: rgba(0,0,0,.1);
+}
+.form-group{
+  align-items: center;
+  margin: 0.5rem!important;
+}
+.choose_currency{
+  flex: 3 0;
+  margin-right: 10px;
+}
+.set_change{
+  flex: 1 0;
+}
+h5{
+  margin: 5px 0;
+}
+.maincurrency{
+  border-bottom: 1px solid rgba(0,0,0,.2);
+}

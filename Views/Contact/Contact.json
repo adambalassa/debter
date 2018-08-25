@@ -1,0 +1,22 @@
+{
+	"css" : [
+		"/assets/css/header.css",
+		"/assets/css/index.css"
+  ],
+	"js" : [
+  ],
+  "fonts" : [
+		"https://fonts.googleapis.com/css?family=Encode+Sans+Expanded"
+	],
+	"seo" :
+	{
+		"title" : "Debter",
+		"charset" : "UTF-8",
+		"meta" : {
+			"description" : "Create or join debter"
+		},
+		"og" : {
+
+		}
+	}
+}

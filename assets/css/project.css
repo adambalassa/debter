@@ -1,0 +1,321 @@
+.holder{
+  padding: 5vh 5vw 0 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: fit-content;
+  width: 90vw;
+}
+.inner-container{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  transition: all ease-in-out .4s;
+}
+.row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+.table-holder{
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,.2);
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 0 3px 0 rgba(0,0,0,.16);
+  min-width: 60%;
+  width: inherit;
+  min-height: fit-content;
+}
+canvas{
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,.2);
+  margin: 20px 0;
+  box-shadow: 0 0 3px 0 rgba(0,0,0,.16);
+}
+.table-header{
+  padding: 10px;
+  flex: 1 0 auto;
+  max-height: 50px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+.table-body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: fit-content;
+}
+.table-row{
+  border-top: 1px solid rgba(0,0,0,.2);
+  display: flex;
+  width: 100%;
+  height: 45px;
+  min-height: fit-content;
+  padding: 0 20px;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1 0 auto;
+}
+.table-head{
+  font-weight: bold;
+}
+.table-cell{
+  display: flex;
+  align-items: center;
+  flex: 3 1;
+  padding: 2px 10px;
+  height: fit-content;
+}
+
+.panels{
+  display: flex;
+  justify-content: center;
+}
+.panel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  flex: 1 0;
+  border: 1px solid rgba(0,0,0,.5);
+  border-radius: 8px;
+  box-shadow: 0 0 3px 0 rgba(0,0,0,.3);
+  min-width: 180px;
+  font-size: 20px;
+  margin: 20px;
+  cursor: pointer;
+  transition: all ease-in-out .2s;
+}
+.popper{
+  resize: none;
+  border: 0;
+  overflow: hidden;
+  outline: 0!important;
+  display: block;
+  background: none;
+}
+.panel-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.panel:hover{
+  background-color: #222222;
+  color: white;
+  box-shadow: 0 0 3px 0 rgba(0,0,0,0.7);
+}
+.payed, .gotpayed{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  flex-direction: column;
+  min-width: 230px;
+  flex: 1 0;
+  width: 100%;
+}
+.my_form{
+  width: 88%;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,.2);
+  margin: 20px;
+  box-shadow: 0 0 5px 0px rgba(0,0,0,.12);
+}
+.form-group{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.form-group select, .form-group input, .form-group button{
+  flex: 1 0;
+  width: 100%;
+}
+.excluded{
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-height: 0;
+  overflow: hidden;
+  transition: all ease-in-out .4s;
+}
+input[type="radio"], input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  width: 0%;
+}
+.form-check-label {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  padding-left: 30px;
+  padding-right: 10px;
+  line-height: 36px;
+  cursor: pointer;
+  z-index: 22;
+  margin-top: 5px;
+}
+.form-check-label::before {
+  content: " ";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #222222;
+  border-radius: 4px;
+  z-index: -1;
+}
+input[type="radio"] + label::before {
+  border-radius: 18px;
+}
+/* Checked */
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
+  padding-left: 10px;
+  color: #fff;
+}
+input[type="checkbox"]:checked + label::before,
+input[type="radio"]:checked + label::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #222222;
+}
+.form-check-label:hover {
+  opacity: .9;
+}
+/* Transition */
+.form-check-label,
+.form-check-label::before {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+input[type="checkbox"]:disabled + label::before{
+  opacity: .8;
+}
+.all, .undo, .debts, .arrangements, .charts{
+  width: 100%;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+}
+.sum{
+  width: 80%;
+  display: none;
+  justify-content: center;
+}
+.sum .table-cell:nth-child(3n + 1){
+  flex: 0;
+  min-width: 32px;
+}
+.all .table-body > .table-row > .table-cell:nth-child(5n + 1){
+  flex: 0;
+}
+.sum .table-row, .arrangements .table-row{
+  background: none!important;
+}
+.table-row:nth-child(2n){
+	background: rgba(0,0,0,0.05)
+}
+.fa-plus:hover, .fa-minus:hover{
+  cursor: pointer;
+  opacity: .8;
+  transition: all ease-in-out .2s
+}
+.details{
+  background: rgba(0,0,0,0.05);
+  box-shadow: inset 0px 11px 15px -10px rgba(0,0,0,0.3);
+  width: 100%;
+  transition: all ease-in-out .5s;
+  height: fit-content;
+  overflow: hidden;
+  max-height: 0;
+  flex: 1 0 auto;
+}
+#my_chart{
+  margin: 10px 0;
+  padding: 10px;
+}
+.details .table-cell{
+  flex: 1!important;
+}
+.table-body .fa{
+  transition: all ease-in-out .2s;
+}
+.fa-info:hover, .fa-refresh:hover{
+  color: #006e98;
+  cursor: pointer;
+}
+.fa-close{
+  color: rgb(200, 20, 20);
+  cursor: pointer;
+}
+.fa-close:hover{
+  color: red;
+}
+.fa-check{
+  color: rgb(20, 210, 20);
+}
+.debts{
+  flex-direction: column;
+}
+.red{
+  color: rgb(200, 20, 20);
+}
+.green{
+  color: rgb(20, 210, 40);
+}
+.open{
+  max-height: 100vh;
+}
+@media screen and (max-device-width: 425px) {
+  /* BUG: popover */
+  .panels{
+    flex-wrap: wrap;
+    width: 42vw;
+  }
+  .panel{
+    min-width: 100%;
+    border-radius: 1.2vh;
+    box-shadow: 0 0 .8vh 0 rgba(0,0,0,0.12);
+  }
+  .panel-title{
+    font-size: 2.8vh!important;
+  }
+  .holder{
+    padding: 50px 0px;
+    max-width: 100%
+  }
+  .table-row, .table-header{
+    height: fit-content!important;
+    min-height: 6vh;
+  }
+  .table-cell{
+    padding: 2px 2vw;
+  }
+  .inner-container{
+    flex: 0 0 92%;
+    max-width: 92%;
+    min-width: 88%;
+  }
+  .sum{
+    width: 100%;
+  }
+}

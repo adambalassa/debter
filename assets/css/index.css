@@ -1,0 +1,118 @@
+.create_project_container, .connect_to_project{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  flex-direction: column;
+  min-width: 230px;
+}
+.create_project, .join_project{
+  width: 88%;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,.2);
+  margin: 20px;
+  box-shadow: 0 0 5px 0px rgba(0,0,0,.12);
+}
+.holder{
+  display: flex;
+  flex-direction: column;
+  min-height: 65vh;
+  max-width: 85vw;
+}
+.row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-holder{
+  display: flex;
+}
+.button{
+  flex: 1;
+}
+.plus_button{
+  margin-left: 8px;
+  border-radius: 5px;
+  background: white;
+  border: 1px solid rgba(0,0,0,.2);
+  padding: 4px;
+  min-width: 40px!important;
+  height: 40px;
+  outline: 0!important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0,0,0,.6);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all ease-in-out .15s;
+}
+.plus_button:hover{
+  background-color: rgba(0,0,0,0.06);
+  color: rgba(0,0,0,.65);
+}
+i:before{
+  line-height: 33px!important
+}
+.join_project .form-group{
+  display: flex;
+}
+.minus{
+  border: 0;
+  color: rgba(0,0,0,.4);
+}
+.info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-popover-body{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.project{
+  width: 100%;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px
+}
+.project:hover{
+  background: rgba(0,0,0,.1);
+}
+.form-group{
+  align-items: center;
+}
+.choose_currency{
+  flex: 3 0;
+  margin-right: 10px;
+}
+.set_change{
+  flex: 1 0;
+}
+@media screen and (max-device-width: 425px) {
+  .col-md-6{
+    max-width: 70vw;
+    flex: 0 0 70vw;
+  }
+  .col-md-8{
+    max-width: 80vw;
+    flex: 0 0 80vw;
+  }
+  .form-group input{
+    height: 3.8vh;
+  }
+  .plus_button{
+    font-size: 2.4vh;
+    height: 3.8vh;
+    width: 3.8vh;
+  }
+  .join_project .form-group{
+    min-height: 5vh!important;
+    margin-bottom: 1.4vh;
+  }
+}

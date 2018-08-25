@@ -1,0 +1,22 @@
+{
+	"css" : [
+		"/assets/css/Index.css"
+  ],
+	"js" : [
+		"/assets/js/Join.js"
+  ],
+  "fonts" : [
+		"https://fonts.googleapis.com/css?family=Encode+Sans+Expanded"
+	],
+	"seo" :
+	{
+		"title" : "Join room",
+		"charset" : "UTF-8",
+		"meta" : {
+			"description" : "Join debter room"
+		},
+		"og" : {
+
+		}
+	}
+}

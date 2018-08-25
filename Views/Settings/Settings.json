@@ -1,0 +1,23 @@
+{
+	"css" : [
+		"/assets/css/header.css",
+		"/assets/css/settings.css"
+  ],
+	"js" : [
+		"/assets/js/settings.js"
+  ],
+  "fonts" : [
+		"https://fonts.googleapis.com/css?family=Encode+Sans+Expanded"
+	],
+	"seo" :
+	{
+		"title" : "Settings",
+		"charset" : "UTF-8",
+		"meta" : {
+			"description" : "Settings"
+		},
+		"og" : {
+
+		}
+	}
+}
