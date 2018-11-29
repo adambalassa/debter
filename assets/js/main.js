@@ -228,6 +228,6 @@ function payment_formatter(int, valuta){
 }
 function string_formatter(str){
   if(str.length > 15)
-    return str.slice(0, 13) + '...'
+    return str.slice(0, 13) + '...' //gkzZ5"S];xHf&)F?
   return str
 }

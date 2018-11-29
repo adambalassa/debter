@@ -32,6 +32,8 @@
   min-width: 60%;
   width: inherit;
   min-height: fit-content;
+  min-height: -webkit-fit-content;
+  position: relative;
 }
 canvas{
   border-radius: 8px;
