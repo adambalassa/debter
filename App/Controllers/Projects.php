@@ -26,7 +26,7 @@ $router->post('join', function(){
 });
 
 $router->post('enter', function(){
-  $model = new Projects_Model(CoreApp\Session::get("projectid"));
+  $model = new Projects_Model($_POST["projectid"]);
   echo json_encode($model->enterProject($_POST["usernames"]));
 });
 
@@ -46,19 +46,7 @@ $router->get("(:projectid)", function($param) {
   }
   else
     setcookie("debter_projects", $param["projectid"], time() + (86400 * 100), "/");
-  switch (CoreApp\Session::get("status")) {
-    case 1:
-      $page = "Join";
-      break;
-    case 2:
-      $page = "Project";
-      break;
-    default:
-      unset($_SESSION["status"]);
-      header('Location: /Index');
-      break;
-  }
-  $view = new CoreApp\View($page);
+  $view = new CoreApp\View("Project");
   $view->parameters["projectname"] = $model->getProjectTitle();
   $view->parameters["projectid"] = $param["projectid"];
   $view->parameters["language"] = CoreApp\Session::get('language');
@@ -67,10 +55,6 @@ $router->get("(:projectid)", function($param) {
 });
 
 $router->get("(:projectid)/history", function($param){
-  if(CoreApp\Session::get("status") != 2){
-    unset($_SESSION["status"]);
-    header('Location: /Index');
-  }
   $model = new Projects_Model($param["projectid"]);
   $view = new CoreApp\View("History");
   $view->parameters["projectname"] = $model->getProjectTitle();
@@ -81,10 +65,6 @@ $router->get("(:projectid)/history", function($param){
 });
 
 $router->get("(:projectid)/payments", function($param){
-  if(CoreApp\Session::get("status") != 2){
-    unset($_SESSION["status"]);
-    header('Location: /Index');
-  }
   $model = new Projects_Model($param["projectid"]);
   $view = new CoreApp\View("Payments");
   $view->parameters["projectname"] = $model->getProjectTitle();
@@ -95,10 +75,6 @@ $router->get("(:projectid)/payments", function($param){
 });
 
 $router->get("(:projectid)/debts", function($param){
-  if(CoreApp\Session::get("status") != 2){
-    unset($_SESSION["status"]);
-    header('Location: /Index');
-  }
   $model = new Projects_Model($param["projectid"]);
   $view = new CoreApp\View("Debts");
   $view->parameters["projectname"] = $model->getProjectTitle();
@@ -109,10 +85,6 @@ $router->get("(:projectid)/debts", function($param){
 });
 
 $router->get("(:projectid)/settings", function($param){
-  if(CoreApp\Session::get("status") != 2){
-    unset($_SESSION["status"]);
-    header('Location: /Index');
-  }
   $model = new Projects_Model($param["projectid"]);
   $view = new CoreApp\View("Settings");
   $view->parameters["projectname"] = $model->getProjectTitle();

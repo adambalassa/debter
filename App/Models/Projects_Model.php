@@ -7,10 +7,6 @@ class Projects_Model extends CoreApp\Model {
   protected $rounding;
   protected $email;
   public function __construct($id = "") {
-    if(CoreApp\Session::get("projectid") != $id){
-      session_unset();
-      header('Location: /Index');
-    }
     $this->project = $id;
     $this->initializeSettings();
   }
@@ -23,7 +19,7 @@ class Projects_Model extends CoreApp\Model {
       $projects = $this->getProjects();
       $this->project = Helpers\GlobalFunctions::codeGenerator($projects);
       $this->uploadProject($projectname);
-      CoreApp\Session::set("status", 1);
+      $this->editSettings("HUF", 1, null);
       CoreApp\Session::set("projectid", $this->project);
       return ["error" => false, "projectid" => $this->project];
     }
@@ -63,7 +59,6 @@ class Projects_Model extends CoreApp\Model {
     try {
       $project = $this->getProjects(true);
       CoreApp\Session::set('projectid', $id);
-      CoreApp\Session::set('status', 2);
       $this->refresh();
       return empty($project) ? ["error" => true, "message" => "Invalid room id"] : ["error" => false, "projectid" => $id];
     }
@@ -98,7 +93,6 @@ class Projects_Model extends CoreApp\Model {
         die($e->getMessage());
       }
       finally{
-        CoreApp\Session::set("status", 2);
         return ["error" => false, "projectid" => $this->project];
       }
     }

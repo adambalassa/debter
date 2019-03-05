@@ -28,7 +28,7 @@ class Payments_Model extends Projects_Model {
   }
   public function getProjectsUsers(){
     try{
-      return array_merge(["error" => false], $this->getStatistics($this->getAllPayments(false)));
+      return array_merge(["error" => false, "title" => $this->getProjectTitle()], $this->getStatistics($this->getAllPayments(false)));
     }
     catch(\Exception $e){
       die(json_encode(["error" => true, "message" => $e->getMessage()]));
